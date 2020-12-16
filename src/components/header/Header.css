@@ -1,0 +1,11 @@
+.header-container {
+    max-width: 500px;
+}
+
+.header {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
