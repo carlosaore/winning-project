@@ -8,14 +8,19 @@ export default function MainPart() {
                 <form>
                     <input type="number" id="number1"></input> 
                     <select>
-                        <option value="pig">pig</option>
-                        <option value="cow">cow</option>
+                    <option value="egg">egg</option>
+                        <option value="cabbage">cabbage</option>
                         <option value="farmer">services of a sexy farmer (1 hour)</option>
+                        <option value="potato">potato</option>
+                        <option value="apples">apples</option>
+                        <option value="bread">bread</option>
+                        <option value="wine">wine</option>
+                        <option value="beer mug">beer mug</option>
+                        <option value="jar">jar of "happy" mushrooms</option>
                         <option value="chicken">chicken</option>
-                        <option value="egg">egg</option>
-                        <option value="vegetables">crate of vegetables</option>
-                        <option value="corn">corncob</option>
-                        <option value="farm">one farm</option>
+                        <option value="pig">fat pig</option>
+                        <option value="cow">cow</option>
+                        <option value="horse">horse</option>
                     </select>
                 </form>
             </div>
@@ -23,14 +28,19 @@ export default function MainPart() {
                 <form>
                     <input type="number" id="number1"></input> 
                     <select>
-                        <option value="pig">pig</option>
-                        <option value="cow">cow</option>
-                        <option value="farmer">services of a sexy farmer (1 hour)</option>
-                        <option value="chicken">chicken</option>
                         <option value="egg">egg</option>
-                        <option value="vegetables">crate of vegetables</option>
-                        <option value="corn">corncob</option>
-                        <option value="farm">one farm</option>
+                        <option value="cabbage">cabbage</option>
+                        <option value="farmer">services of a sexy farmer (1 hour)</option>
+                        <option value="potato">potato</option>
+                        <option value="apples">apples</option>
+                        <option value="bread">bread</option>
+                        <option value="wine">wine</option>
+                        <option value="beer mug">beer mug</option>
+                        <option value="jar">Jar of "happy" mushrooms</option>
+                        <option value="chicken">chicken</option>
+                        <option value="pig">fat pig</option>
+                        <option value="cow">cow</option>
+                        <option value="horse">horse</option>
                     </select>
                 </form>
             </div>
