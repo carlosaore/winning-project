@@ -15,21 +15,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Header />
+      <div className="App" className="background">
+        <div className="app-main-div">
+          <Header />
 
-        <Switch>
-          <Route
-            path="/Page1"
-            render={(props) => <Page1 {...props} text={this.state.test} />}
-          />
-          <Route path="/Page2" render={(props) => <Page2 {...props} />} />
-          <Route path="/Page3" render={(props) => <Page3 {...props} />} />
+          <Switch>
+            <Route
+              path="/Page1"
+              render={(props) => <Page1 {...props} text={this.state.test} />}
+            />
+            <Route path="/Page2" render={(props) => <Page2 {...props} />} />
+            <Route path="/Page3" render={(props) => <Page3 {...props} />} />
 
-          <Route exact path="/" render={(props) => <MainPart {...props} />} />
-        </Switch>
+            <Route exact path="/" render={(props) => <MainPart {...props} />} />
+          </Switch>
 
-        <Footer />
+          <Footer />
+        </div>
       </div>
     );
   }

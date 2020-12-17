@@ -3,7 +3,7 @@ import './MainPart.css'
 
 export default function MainPart() {
     return (
-        <div>
+        <div className="main-main-div">
             MAIN PART
         </div>
     )
