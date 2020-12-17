@@ -39,10 +39,11 @@ export default function MainPart() {
                 <button>Reset</button>
             </div>
             <div>
-                <img src="https://via.placeholder.com/150" />
-                <p>-></p>
-                <img src="https://via.placeholder.com/150" />
+                <img src="https://via.placeholder.com/150" alt="" />
+                <p>--</p>
+                <img src="https://via.placeholder.com/150" alt=""/>
             </div>
+            <p>text from props</p>
             <div>
                 <button>Update ratios</button>
                 <button>Reverse trade</button>
