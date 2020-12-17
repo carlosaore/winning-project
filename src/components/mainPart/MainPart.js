@@ -1,7 +1,7 @@
-import React from 'react';
 import './MainPart.css';
-import { Component } from 'react';
 import ExchangeData from './ExchangeData';
+import React from 'react';
+import { Component } from 'react';
 
 export default class MainPart extends Component {
     state = {
