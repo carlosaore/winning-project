@@ -4,23 +4,23 @@ import './App.css';
 import MainPart from './components/mainPart/MainPart';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import Page1 from './components/page1/Page1';
+import OtherTrades from './components/OtherTrades/OtherTrades';
 import Page2 from './components/page2/Page2';
 import Page3 from './components/page3/Page3';
 import ExchangeData from './assets/ExchangeData';
+import { useState, useEffect } from 'react';
 
-class App extends React.Component {
-    state = {
-        test: 'text from state',
-        data: {},
-        newData: {},
-        dataFromApiReceived: false,
-    };
+export default function App() {
+    const [currentRate, setCurrentRate] = useState({});
+    const [myProduct, setMyProduct] = useState('CORN');
+    const [myProductAmount, setMyProductAmount] = useState('');
+    const [desiredProduct, setDesiredProduct] = useState('CORN');
+    const [desiredProductAmount, setDesiredProductAmount] = useState('');
 
-    apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
+    const apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
 
-    componentDidMount() {
-        fetch(this.apiUrl)
+    useEffect(() => {
+        fetch(apiUrl)
             .then((response) => response.json())
             .then((dataFromApi) => {
                 const newData = {};
@@ -30,48 +30,76 @@ class App extends React.Component {
                             dataFromApi.conversion_rates[key];
                     }
                 });
-                this.setState({
-                    data: dataFromApi.conversion_rates,
-                    dataFromApiReceived: true,
-                    newData: newData,
-                });
+                setCurrentRate(newData);
             });
-    }
+    }, []);
 
-    render() {
-        return (
-            <div className="App" className="background">
-                <div className="app-main-div">
-                    {/* <Header /> */}
+    const countPrice = () => {
+        setDesiredProductAmount(
+            Math.round(
+                (myProductAmount * currentRate[myProduct]) /
+                    currentRate[desiredProduct]
+            )
+        );
+    };
 
-                    <Switch>
-                        <Route
-                            path="/Page1"
-                            render={(props) => <Page1 {...props} />}
-                        />
-                        <Route
-                            path="/Page2"
-                            render={(props) => <Page2 {...props} />}
-                        />
-                        <Route
-                            path="/Page3"
-                            render={(props) => <Page3 {...props} />}
-                        />
+    const updateRatios = () => {
+        let newDataWithFluctuation = { ...currentRate };
+        const min = -0.05;
+        const max = 0.05;
+        Object.keys(newDataWithFluctuation).forEach((key) => {
+            newDataWithFluctuation[key] =
+                newDataWithFluctuation[key] +
+                (Math.random() * (max - min) + min);
+        });
+        setCurrentRate(newDataWithFluctuation);
+    };
 
-                        <Route
-                            exact
-                            path="/"
-                            render={(props) => (
-                                <MainPart data={this.state.newData} />
-                            )}
-                        />
-                    </Switch>
+
+    return (
+        <div className="background">
+            <div className="app-main-div">
+                <Header />
+
+                <Switch>
+                    <Route
+                        path="/Page1"
+                        render={(props) => <OtherTrades {...props} />}
+                    />
+                    <Route
+                        path="/Page2"
+                        render={(props) => <Page2 {...props} />}
+                    />
+                    <Route
+                        path="/Page3"
+                        render={(props) => <Page3 {...props} />}
+                    />
+
+                    <Route
+                        exact
+                        path="/"
+                        render={(props) => (
+                            <MainPart
+                                myProductAmount={myProductAmount}
+                                desiredProductAmount={desiredProductAmount}
+                                setMyProduct={setMyProduct}
+                                setMyProductAmount={setMyProductAmount}
+                                setDesiredProduct={setDesiredProduct}
+                                setDesiredProductAmount={
+                                    setDesiredProductAmount
+                                }
+                                updateRatios={updateRatios}
+                                countPrice={countPrice}
+                            />
+                        )}
+                    />
+                </Switch>
 
                     {/* <Footer /> */}
                 </div>
             </div>
-        );
-    }
+        
+    );
 }
 
 /*
@@ -112,5 +140,3 @@ class App extends React.Component {
 }
 
 */
-
-export default App;
