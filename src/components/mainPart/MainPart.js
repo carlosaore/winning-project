@@ -1,5 +1,6 @@
 import './MainPart.css';
 import React from 'react';
+import icon from '../../assets/icons/002-corn.png';
 
 export default function MainPart(props) {
     return (
@@ -9,6 +10,8 @@ export default function MainPart(props) {
                     <input
                         type="number"
                         id="number1"
+                        min="1"
+                        step="1"
                         value={props.myProductAmount}
                         onChange={(event) => {
                             props.setMyProductAmount(event.target.value);
@@ -83,7 +86,7 @@ export default function MainPart(props) {
                     </select>
                 </form>
             </div>
-            <div className='upper-buttons-container'>
+            <div className="upper-buttons-container">
                 <button onClick={props.countPrice}>Count</button>
                 <button
                     onClick={() => {
@@ -94,13 +97,13 @@ export default function MainPart(props) {
                     Reset
                 </button>
             </div>
-            <div className='img-Container'>
-                <img src="https://via.placeholder.com/150" alt="" />
+            <div className="img-Container">
+                <img src={icon} alt="" />
                 <div class="triangle-right"></div>
-                <img src="https://via.placeholder.com/150" alt="" />
+                <img src={icon} alt="" />
             </div>
             <p>text from props</p>
-            <div className='lower-buttons-container'>
+            <div className="lower-buttons-container">
                 <button onClick={props.updateRatios}>Update ratios</button>
                 <button>Reverse trade</button>
                 <button>Ratio fluctuation</button>
