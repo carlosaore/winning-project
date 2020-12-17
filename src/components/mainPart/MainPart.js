@@ -1,10 +1,11 @@
 import './MainPart.css';
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 export default function MainPart(props) {
     return (
         <div className="main-main-div">
-            <div>
+            <div className='form-container'>
                 <form>
                     <input
                         type="number"
@@ -45,14 +46,10 @@ export default function MainPart(props) {
                     </select>
                 </form>
             </div>
-            <div>
+            <div className='form-container'>
                 <form>
-                    <input
-                        type="number"
-                        id="number1"
-                        value={props.desiredProductAmount}
-                    ></input>
-                    <select
+                    
+                    <select className='select-desired-product'
                         onChange={(event) => {
                             props.setDesiredProduct(event.target.value);
                         }}
@@ -84,7 +81,8 @@ export default function MainPart(props) {
                 </form>
             </div>
             <div className='upper-buttons-container'>
-                <button onClick={props.countPrice}>Count</button>
+                <button onClick={props.countPrice}>Update</button>
+                <button>Fix Trade</button>
                 <button
                     onClick={() => {
                         props.setMyProductAmount('');
@@ -99,12 +97,12 @@ export default function MainPart(props) {
                 <div class="triangle-right"></div>
                 <img src="https://via.placeholder.com/150" alt="" />
             </div>
-            <p>text from props</p>
+            <textarea>DYNAMICALLY MODIFIED TEXT</textarea>
             <div className='lower-buttons-container'>
-                <button onClick={props.updateRatios}>Update ratios</button>
+                {/* <button onClick={props.updateRatios}>Update ratios</button>
                 <button>Reverse trade</button>
-                <button>Ratio fluctuation</button>
-                <button>Other trades</button>
+                <button>Ratio fluctuation</button> */}
+                <button className='show-other-trades-button'><Link to="/other_trades">Show Other trades</Link></button>
             </div>
         </div>
     );
