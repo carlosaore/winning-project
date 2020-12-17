@@ -42,7 +42,7 @@ class App extends React.Component {
         return (
             <div className="App" className="background">
                 <div className="app-main-div">
-                    <Header />
+                    {/* <Header /> */}
 
                     <Switch>
                         <Route
@@ -67,7 +67,7 @@ class App extends React.Component {
                         />
                     </Switch>
 
-                    <Footer />
+                    {/* <Footer /> */}
                 </div>
             </div>
         );
