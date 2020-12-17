@@ -21,3 +21,5 @@ const ExchangeData = {
 };
 
 export default ExchangeData;
+
+//[{ name: 'eggs', value: 'EGGS', currency: 'USD', icon: '023-eggs.png' }];

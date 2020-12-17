@@ -1,6 +1,7 @@
 import './MainPart.css';
 import React from 'react';
 import {Link} from 'react-router-dom'
+import icon from '../../assets/icons/002-corn.png';
 
 export default function MainPart(props) {
     return (
@@ -10,6 +11,8 @@ export default function MainPart(props) {
                     <input
                         type="number"
                         id="number1"
+                        min="1"
+                        step="1"
                         value={props.myProductAmount}
                         onChange={(event) => {
                             props.setMyProductAmount(event.target.value);
@@ -92,10 +95,10 @@ export default function MainPart(props) {
                     Reset
                 </button>
             </div>
-            <div className='img-Container'>
-                <img src="https://via.placeholder.com/150" alt="" />
+            <div className="img-Container">
+                <img src={icon} alt="" />
                 <div class="triangle-right"></div>
-                <img src="https://via.placeholder.com/150" alt="" />
+                <img src={icon} alt="" />
             </div>
             <textarea>DYNAMICALLY MODIFIED TEXT</textarea>
             <div className='lower-buttons-container'>
