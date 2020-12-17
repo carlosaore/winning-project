@@ -12,9 +12,9 @@ import { useState, useEffect } from 'react';
 
 export default function App() {
     const [currentRate, setCurrentRate] = useState({});
-    const [myProduct, setMyProduct] = useState('EGG');
+    const [myProduct, setMyProduct] = useState('CORN');
     const [myProductAmount, setMyProductAmount] = useState('');
-    const [desiredProduct, setDesiredProduct] = useState('EGG');
+    const [desiredProduct, setDesiredProduct] = useState('CORN');
     const [desiredProductAmount, setDesiredProductAmount] = useState('');
 
     const apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
