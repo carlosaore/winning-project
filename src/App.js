@@ -57,14 +57,14 @@ export default function App() {
 
 
     return (
-        <div className="App" className="background">
+        <div className="background">
             <div className="app-main-div">
                 <Header />
 
                 <Switch>
                     <Route
                         path="/Page1"
-                        render={(props) => <Page1 {...props} />}
+                        render={(props) => <OtherTrades {...props} />}
                     />
                     <Route
                         path="/Page2"
