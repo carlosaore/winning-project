@@ -83,7 +83,7 @@ export default function MainPart(props) {
                     </select>
                 </form>
             </div>
-            <div>
+            <div className='upper-buttons-container'>
                 <button onClick={props.countPrice}>Count</button>
                 <button
                     onClick={() => {
@@ -94,13 +94,13 @@ export default function MainPart(props) {
                     Reset
                 </button>
             </div>
-            <div>
+            <div className='img-Container'>
                 <img src="https://via.placeholder.com/150" alt="" />
-                <p>--</p>
+                <div class="triangle-right"></div>
                 <img src="https://via.placeholder.com/150" alt="" />
             </div>
             <p>text from props</p>
-            <div>
+            <div className='lower-buttons-container'>
                 <button onClick={props.updateRatios}>Update ratios</button>
                 <button>Reverse trade</button>
                 <button>Ratio fluctuation</button>

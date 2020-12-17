@@ -95,9 +95,10 @@ export default function App() {
                     />
                 </Switch>
 
-                <Footer />
+                    {/* <Footer /> */}
+                </div>
             </div>
-        </div>
+        
     );
 }
 
