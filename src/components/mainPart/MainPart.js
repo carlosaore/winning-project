@@ -1,5 +1,6 @@
-import React from 'react'
-import './MainPart.css'
+import './MainPart.css';
+import React from 'react';
+import { Component } from 'react';
 
 export default function MainPart() {
     return (
@@ -62,4 +63,5 @@ export default function MainPart() {
             </div>
         </div>
     )
+
 }
