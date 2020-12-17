@@ -4,7 +4,7 @@ import './App.css';
 import MainPart from './components/mainPart/MainPart';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import Page1 from './components/page1/Page1';
+import OtherTrades from './components/OtherTrades/OtherTrades';
 import Page2 from './components/page2/Page2';
 import Page3 from './components/page3/Page3';
 import ExchangeData from './assets/ExchangeData';
@@ -46,8 +46,8 @@ class App extends React.Component {
 
                     <Switch>
                         <Route
-                            path="/Page1"
-                            render={(props) => <Page1 {...props} />}
+                            path="/other_trades"
+                            render={(props) => <OtherTrades {...props} myProduct="pig" myProductQuantity={4}/>}
                         />
                         <Route
                             path="/Page2"

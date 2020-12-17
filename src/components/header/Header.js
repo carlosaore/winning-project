@@ -10,13 +10,10 @@ export default function Header() {
           <Link to="/">Home</Link>
         </li>
         <li className="header-item">
-          <Link to="/Page1">PAGE1</Link>
+          <Link to="/other_trades">Other trades</Link>
         </li>
         <li className="header-item">
           <Link to="/Page2">PAGE2</Link>
-        </li>
-        <li className="header-item">
-          <Link to="/Page3">PAGE3</Link>
         </li>
       </ul>
     </div>
