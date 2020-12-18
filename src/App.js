@@ -22,9 +22,8 @@ export default function App() {
     const [tradeFairness, setTradeFairness] = useState('fair');
     const [allPrices, setAllPrices] = useState([]);
 
-    const apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
-
     useEffect(() => {
+        const apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
         fetch(apiUrl)
             .then((response) => response.json())
             .then((dataFromApi) => {
@@ -43,11 +42,6 @@ export default function App() {
                 setCurrentRate(newData);
             });
     }, []);
-
-    useEffect(() => {
-        countPrice();
-        countAllPrices();
-    }, [myProduct, myProductAmount, desiredProduct, currentRate]);
 
     const countPrice = () => {
         const amount =
@@ -79,6 +73,20 @@ export default function App() {
         });
         setAllPrices(allPrices);
     };
+
+    useEffect(countPrice, [
+        myProduct,
+        myProductAmount,
+        desiredProduct,
+        currentRate,
+    ]);
+
+    useEffect(countAllPrices, [
+        myProduct,
+        myProductAmount,
+        desiredProduct,
+        currentRate,
+    ]);
 
     const updateRatios = () => {
         let newDataWithFluctuation = { ...currentRate };
