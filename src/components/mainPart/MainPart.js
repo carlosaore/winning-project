@@ -62,7 +62,7 @@ export default function MainPart(props) {
                 </form>
             </div>
             <div className="upper-buttons-container">
-                <button onClick={props.countPrice}>Update</button>
+                <button onClick={props.updateRatios}>Update</button>
                 <button>Fix Trade</button>
                 <button
                     onClick={() => {
@@ -78,7 +78,9 @@ export default function MainPart(props) {
                 <div class="triangle-right"></div>
                 <img src={props.desiredProductIcon.default} alt="" />
             </div>
-            <textarea>DYNAMICALLY MODIFIED TEXT</textarea>
+            <textarea
+                value={`The valid trade is: ${props.myProductAmount} ${props.myProduct} are worth ${props.desiredProductAmount} ${props.desiredProduct}. This is a ${props.tradeFairness} trade.`}
+            ></textarea>
             <div className="lower-buttons-container">
                 {/* <button onClick={props.updateRatios}>Update ratios</button>
                 <button>Reverse trade</button>

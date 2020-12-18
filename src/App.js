@@ -21,6 +21,7 @@ export default function App() {
     const [desiredProductIcon, setDesiredProductIcon] = useState({
         default: eggsIcon,
     });
+    const [tradeFairness, setTradeFairness] = useState('fair');
 
     const apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
 
@@ -44,13 +45,26 @@ export default function App() {
             });
     }, []);
 
+    useEffect(() => {
+        countPrice();
+    }, [myProduct, myProductAmount, desiredProduct, currentRate]);
+
     const countPrice = () => {
-        setDesiredProductAmount(
-            Math.round(
-                (myProductAmount * currentRate[myProduct]) /
-                    currentRate[desiredProduct]
-            )
-        );
+        const amount =
+            (myProductAmount * currentRate[myProduct]) /
+            currentRate[desiredProduct];
+        const roundedAmount = Math.round(amount);
+        const floorAmount = Math.floor(amount);
+        const ceilAmount = Math.ceil(amount);
+        let fairness =
+            floorAmount === ceilAmount
+                ? 'fair'
+                : roundedAmount === floorAmount
+                ? 'loosing'
+                : 'winning';
+        setTradeFairness(fairness);
+
+        setDesiredProductAmount(roundedAmount);
     };
 
     const updateRatios = () => {
@@ -105,6 +119,7 @@ export default function App() {
                                 }
                                 updateRatios={updateRatios}
                                 countPrice={countPrice}
+                                tradeFairness={tradeFairness}
                             />
                         )}
                     />
