@@ -1,6 +1,6 @@
 import './MainPart.css';
 import React from 'react';
-import icon from '../../assets/icons/002-corn.png';
+import ExchangeData from '../../assets/ExchangeData';
 
 export default function MainPart(props) {
     return (
@@ -20,31 +20,20 @@ export default function MainPart(props) {
                     <select
                         onChange={(event) => {
                             props.setMyProduct(event.target.value);
+                            const iconSrc = ExchangeData.find(
+                                (data) => data.value === event.target.value
+                            ).icon;
+                            import(`../../assets/icons/${iconSrc}.png`).then(
+                                (icon) => {
+                                    props.setMyProductIcon(icon);
+                                }
+                            );
                         }}
+                        value={props.myProduct}
                     >
-                        <option value="CORN">corn</option>
-                        <option value="FARM">farm</option>
-                        <option value="FARMER">farmer</option>
-                        <option value="FARMER-GIRL">farmer-girl</option>
-                        <option value="PIG">pig</option>
-                        <option value="COW">cow</option>
-                        <option value="CARROTS">carrots</option>
-                        <option value="CHICKEN">chicken</option>
-                        <option value="SHEEP">sheep</option>
-                        <option value="HORSE">horse</option>
-                        <option value="EGGS">eggs</option>
-                        <option value="GOOSE">goose</option>
-                        <option value="WEATHER-VANE">weather-vane</option>
-                        <option value="HAY-BALE">hay-bale</option>
-                        <option value="SEXY-FARMER">
-                            services of sexy-farmer (1 hour)
-                        </option>
-                        <option value="FARM-LADY">
-                            farm-lady (not sure what you'll get)
-                        </option>
-                        <option value="PS5">PS5</option>
-                        <option value="SPACE-MONKEY">astro space-monkey</option>
-                        <option value="PIKACHU">pikachu</option>
+                        {ExchangeData.map((data) => (
+                            <option value={data.value}>{data.name}</option>
+                        ))}
                     </select>
                 </form>
             </div>
@@ -58,31 +47,20 @@ export default function MainPart(props) {
                     <select
                         onChange={(event) => {
                             props.setDesiredProduct(event.target.value);
+                            const iconSrc = ExchangeData.find(
+                                (data) => data.value === event.target.value
+                            ).icon;
+                            import(`../../assets/icons/${iconSrc}.png`).then(
+                                (icon) => {
+                                    props.setDesiredProductIcon(icon);
+                                }
+                            );
                         }}
+                        value={props.desiredProduct}
                     >
-                        <option value="CORN">corn</option>
-                        <option value="FARM">farm</option>
-                        <option value="FARMER">farmer</option>
-                        <option value="FARMER-GIRL">farmer-girl</option>
-                        <option value="PIG">pig</option>
-                        <option value="COW">cow</option>
-                        <option value="CARROTS">carrots</option>
-                        <option value="CHICKEN">chicken</option>
-                        <option value="SHEEP">sheep</option>
-                        <option value="HORSE">horse</option>
-                        <option value="EGGS">eggs</option>
-                        <option value="GOOSE">goose</option>
-                        <option value="WEATHER-VANE">weather-vane</option>
-                        <option value="HAY-BALE">hay-bale</option>
-                        <option value="SEXY-FARMER">
-                            services of sexy-farmer (1 hour)
-                        </option>
-                        <option value="FARM-LADY">
-                            farm-lady (not sure what you'll get)
-                        </option>
-                        <option value="PS5">PS5</option>
-                        <option value="SPACE-MONKEY">astro space-monkey</option>
-                        <option value="PIKACHU">pikachu</option>
+                        {ExchangeData.map((data) => (
+                            <option value={data.value}>{data.name}</option>
+                        ))}
                     </select>
                 </form>
             </div>
@@ -98,9 +76,9 @@ export default function MainPart(props) {
                 </button>
             </div>
             <div className="img-Container">
-                <img src={icon} alt="" />
+                <img src={props.myProductIcon.default} alt="" />
                 <div class="triangle-right"></div>
-                <img src={icon} alt="" />
+                <img src={props.desiredProductIcon.default} alt="" />
             </div>
             <p>text from props</p>
             <div className="lower-buttons-container">

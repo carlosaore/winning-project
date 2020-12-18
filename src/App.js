@@ -9,13 +9,18 @@ import Page2 from './components/page2/Page2';
 import Page3 from './components/page3/Page3';
 import ExchangeData from './assets/ExchangeData';
 import { useState, useEffect } from 'react';
+import eggsIcon from './assets/icons/023-eggs.png';
 
 export default function App() {
     const [currentRate, setCurrentRate] = useState({});
-    const [myProduct, setMyProduct] = useState('CORN');
+    const [myProduct, setMyProduct] = useState('EGGS');
     const [myProductAmount, setMyProductAmount] = useState('');
-    const [desiredProduct, setDesiredProduct] = useState('CORN');
+    const [desiredProduct, setDesiredProduct] = useState('EGGS');
     const [desiredProductAmount, setDesiredProductAmount] = useState('');
+    const [myProductIcon, setMyProductIcon] = useState({ default: eggsIcon });
+    const [desiredProductIcon, setDesiredProductIcon] = useState({
+        default: eggsIcon,
+    });
 
     const apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
 
@@ -24,12 +29,17 @@ export default function App() {
             .then((response) => response.json())
             .then((dataFromApi) => {
                 const newData = {};
-                Object.keys(dataFromApi.conversion_rates).forEach((key) => {
-                    if (key in ExchangeData) {
-                        newData[ExchangeData[key]] =
-                            dataFromApi.conversion_rates[key];
+                Object.keys(dataFromApi.conversion_rates).forEach(
+                    (currency) => {
+                        const data = ExchangeData.find(
+                            (data) => data.currency === currency
+                        );
+                        if (data) {
+                            newData[data.value] =
+                                dataFromApi.conversion_rates[currency];
+                        }
                     }
-                });
+                );
                 setCurrentRate(newData);
             });
     }, []);
@@ -55,7 +65,6 @@ export default function App() {
         setCurrentRate(newDataWithFluctuation);
     };
 
-
     return (
         <div className="background">
             <div className="app-main-div">
@@ -80,9 +89,15 @@ export default function App() {
                         path="/"
                         render={(props) => (
                             <MainPart
+                                myProduct={myProduct}
+                                myProductIcon={myProductIcon}
+                                desiredProductIcon={desiredProductIcon}
+                                desiredProduct={desiredProduct}
                                 myProductAmount={myProductAmount}
                                 desiredProductAmount={desiredProductAmount}
                                 setMyProduct={setMyProduct}
+                                setMyProductIcon={setMyProductIcon}
+                                setDesiredProductIcon={setDesiredProductIcon}
                                 setMyProductAmount={setMyProductAmount}
                                 setDesiredProduct={setDesiredProduct}
                                 setDesiredProductAmount={
@@ -95,10 +110,9 @@ export default function App() {
                     />
                 </Switch>
 
-                    {/* <Footer /> */}
-                </div>
+                {/* <Footer /> */}
             </div>
-        
+        </div>
     );
 }
 
