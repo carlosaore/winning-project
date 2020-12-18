@@ -21,12 +21,12 @@
 
 
 ### Journey
-> We must have got kidnapped.
-I can’t remember anything.
-Just waking up somewhere,
+We must have got kidnapped.
+I can’t remember anything
+except from waking up somewhere,
 we had never been before.
 It was a very crowded place
-it was noisy
+it was noisy and smelly,
 it was people, animals and stuff everywhere.
 
 **** 
@@ -38,7 +38,7 @@ How is that possible?
 
 ****
 
-We had no idea how we got here
+We had no idea how we got here,
 and still less, how we should travel back.
 So we decided to find something to eat and
 a place to stay until we found out 
@@ -96,11 +96,13 @@ There should be exchange rates,
 
 being accessible for everyone.
 
-Everyone should be able to know at every time
+Everyone should be able to know 
 
-what he could get in exchange 
+at every time,
 
-for what he wants to exchange.
+what he could get in exchange, 
+
+for what he wants to trade.
 
 
 
@@ -142,9 +144,9 @@ Show examples of usage:
 
 
 ## Features
-* See best items along with items for your trade
+* See best items along icons for your trade
 * price fluctutaion is integrated
-* certiefied API for Middle Ages trades
+* certified API about trading prices and data in medieval towns and markets
 
 To-do list:
 * Arrows will turn into different colors, depending on how good your trade is.
