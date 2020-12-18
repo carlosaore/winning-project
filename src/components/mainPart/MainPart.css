@@ -1,5 +1,4 @@
 * {
-  border: 1px solid black;
   font-family: "Almendra SC", serif;
   font-family: "Amarante", cursive;
 }
@@ -76,14 +75,16 @@ img {
   width: 150px;
 }
 
-textarea {
+.text-area {
   width: 55%;
   height: 10%;
   margin: 0 auto;
-  background-color: rgb(138, 119, 111);
-  color: white;
-  font-size: 16px;
+  /* background-color: rgb(138, 119, 111); */
+  color: rgb(102, 26, 26);
+  font-size: 22px;
   text-align: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 textarea {
@@ -111,18 +112,6 @@ button {
   padding: 0.8em 2em;
   outline: none;
   background-color: rgb(138, 119, 111);
-  /* background-image: linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0) 30%,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0) 70%
-    ),
-    radial-gradient(
-      190% 100% at 50% 0%,
-      rgba(255, 255, 255, 0.7) 0%,
-      rgba(255, 255, 255, 0.5) 50%,
-      rgba(0, 0, 0, 0) 50%
-    ); */
   background-repeat: no-repeat;
   background-size: 200% 100%, auto;
   background-position: 200% 0, 0 0;
@@ -140,6 +129,10 @@ button:hover {
 .show-other-trades-button {
   width: 100%;
   margin: 20px;
+}
+
+.link {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 650px) {

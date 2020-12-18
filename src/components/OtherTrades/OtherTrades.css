@@ -9,3 +9,7 @@
 .go-back-button {
     margin: 0 auto;
 }
+
+.link {
+    text-decoration: none;
+}

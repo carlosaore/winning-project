@@ -78,18 +78,18 @@ export default function MainPart(props) {
                 <img id='arrows'src={icon} alt="arrows" />
                 <img src={props.desiredProductIcon.default} alt="" />
             </div>
-            <textarea
-                value={ isNaN(props.myProductAmoun)
+            <p className='text-area'>
+                { isNaN(props.myProductAmoun)
                     ? "Please select what you want to trade"
                     : `You can trade ${props.myProductAmount} ${props.myProduct} for ${props.desiredProductAmount} ${props.desiredProduct}. This is a ${props.tradeFairness} trade.`
                 }
-            ></textarea>
+            </p>
             <div className="lower-buttons-container">
                 {/* <button onClick={props.updateRatios}>Update ratios</button>
                 <button>Reverse trade</button>
                 <button>Ratio fluctuation</button> */}
                 <button className="show-other-trades-button">
-                    <Link to="/other_trades">Show Other trades</Link>
+                    <Link className='link' to="/other_trades">Show Other trades</Link>
                 </button>
             </div>
         </div>

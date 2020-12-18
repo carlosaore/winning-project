@@ -103,7 +103,7 @@ export default function OtherTrades(props) {
       </div>
 
 
-      <button className='go-back-button'><Link to="/">GO BACK</Link></button>
+      <button className='go-back-button'><Link className='link' to="/">GO BACK</Link></button>
     </div>
   );
 }
