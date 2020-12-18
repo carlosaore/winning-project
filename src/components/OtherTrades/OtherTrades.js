@@ -23,7 +23,7 @@ export default function OtherTrades(props) {
             <option value="CORN">corn</option>
             <option value="FARM">farm</option>
             <option value="FARMER">farmer</option>
-            <option value="FARMER-GIRL">farmer-girl</option>
+            <option value="FARMER-GIRL">farmer girl</option>
             <option value="PIG">pig</option>
             <option value="COW">cow</option>
             <option value="CARROTS">carrots</option>
@@ -58,7 +58,7 @@ export default function OtherTrades(props) {
         <hr />
         <div className="options-container">
           <div className="options">
-            <p>2 cows</p>
+            <p>corn</p>
             <img src="https://via.placeholder.com/50" alt="" />
           </div>
           <div className="options">
@@ -69,22 +69,34 @@ export default function OtherTrades(props) {
 
         <div className="options-container">
           <div className="options">
-            <p>2 cows</p>
+            <p>farm</p>
             <img src="https://via.placeholder.com/50" alt="" />
           </div>
           <div className="options">
-            <p>2 cows</p>
+            <p>farmer</p>
             <img src="https://via.placeholder.com/50" alt="" />
           </div>
         </div>
 
         <div className="options-container">
           <div className="options">
-            <p>2 cows</p>
+            <p>farmer girl</p>
             <img src="https://via.placeholder.com/50" alt="" />
           </div>
           <div className="options">
-            <p>2 cows</p>
+            <p>pig</p>
+            <img src="https://via.placeholder.com/50" alt="" />
+          </div>
+          <div className="options">
+            <p>cow</p>
+            <img src="https://via.placeholder.com/50" alt="" />
+          </div>
+          <div className="options">
+            <p>carrots</p>
+            <img src="https://via.placeholder.com/50" alt="" />
+          </div>
+          <div className="options">
+            <p>pig</p>
             <img src="https://via.placeholder.com/50" alt="" />
           </div>
         </div>

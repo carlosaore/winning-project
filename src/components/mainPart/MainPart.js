@@ -64,7 +64,6 @@ export default function MainPart(props) {
             </div>
             <div className="upper-buttons-container">
                 <button onClick={props.updateRatios}>Update</button>
-                <button>Fix Trade</button>
                 <button
                     onClick={() => {
                         props.setMyProductAmount('');
@@ -80,7 +79,10 @@ export default function MainPart(props) {
                 <img src={props.desiredProductIcon.default} alt="" />
             </div>
             <textarea
-                value={`The valid trade is: ${props.myProductAmount} ${props.myProduct} are worth ${props.desiredProductAmount} ${props.desiredProduct}. This is a ${props.tradeFairness} trade.`}
+                value={ isNaN(props.myProductAmoun)
+                    ? "Please select what you want to trade"
+                    : `You can trade ${props.myProductAmount} ${props.myProduct} for ${props.desiredProductAmount} ${props.desiredProduct}. This is a ${props.tradeFairness} trade.`
+                }
             ></textarea>
             <div className="lower-buttons-container">
                 {/* <button onClick={props.updateRatios}>Update ratios</button>
