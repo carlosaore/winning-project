@@ -73,8 +73,8 @@ export default function App() {
         const max = 0.05;
         Object.keys(newDataWithFluctuation).forEach((key) => {
             newDataWithFluctuation[key] =
-                newDataWithFluctuation[key] +
-                (Math.random() * (max - min) + min);
+                newDataWithFluctuation[key] *
+                (1 + Math.random() * (max - min) + min);
         });
         setCurrentRate(newDataWithFluctuation);
     };
