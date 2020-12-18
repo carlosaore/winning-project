@@ -2,7 +2,6 @@ import React from 'react';
 import './OtherTrades.css';
 import { Link } from 'react-router-dom';
 import ExchangeData from '../../assets/ExchangeData';
-import { useEffect } from 'react';
 
 export default function OtherTrades(props) {
     // useEffect(() => {
@@ -47,7 +46,7 @@ export default function OtherTrades(props) {
                 <div className="options-container">
                     {props.allPrices.map((price, index) => {
                         return (
-                            <div className="options">
+                            <div key={index} className="options">
                                 <p>
                                     {props.allPrices[index]}{' '}
                                     {ExchangeData[index].value}

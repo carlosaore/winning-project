@@ -2,8 +2,6 @@ import { Switch, Route } from 'react-router-dom';
 import React from 'react';
 import './App.css';
 import MainPart from './components/mainPart/MainPart';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 import OtherTrades from './components/OtherTrades/OtherTrades';
 import Page2 from './components/page2/Page2';
 import Page3 from './components/page3/Page3';
