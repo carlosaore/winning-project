@@ -79,9 +79,7 @@ export default function MainPart(props) {
                 <img src={props.desiredProductIcon.default} alt="" />
             </div>
             <p className="text-area">
-                {isNaN(props.myProductAmount)
-                    ? 'Please select what you want to trade'
-                    : `You can trade ${props.myProductAmount} ${props.myProduct} for ${props.desiredProductAmount} ${props.desiredProduct}. This is a ${props.tradeFairness} trade.`}
+                {`You can trade ${props.myProductAmount} ${props.myProduct} for ${props.desiredProductAmount} ${props.desiredProduct}. This is a ${props.tradeFairness} trade.`}
             </p>
             <div className="lower-buttons-container">
                 {/* <button onClick={props.updateRatios}>Update ratios</button>
