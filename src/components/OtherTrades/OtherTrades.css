@@ -1,0 +1,11 @@
+.options-container {
+    display: flex;
+    flex-direction: row;
+}
+.options {
+    width: 50%;
+}
+
+.go-back-button {
+    margin: 0 auto;
+}
