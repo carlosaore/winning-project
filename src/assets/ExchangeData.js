@@ -1,7 +1,7 @@
 const ExchangeData = [
     {
-        name: 'eggs',
-        value: 'EGGS',
+        name: 'egg',
+        value: 'EGG',
         currency: 'USD',
         icon: '023-eggs',
     },
@@ -18,8 +18,8 @@ const ExchangeData = [
         icon: '111-sexy-farmer',
     },
     {
-        name: 'carrots',
-        value: 'CARROTS',
+        name: 'carrot',
+        value: 'CARROT',
         currency: 'GGP',
         icon: '011-carrots',
     },
