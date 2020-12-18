@@ -2,6 +2,7 @@ import './MainPart.css';
 import React from 'react';
 import ExchangeData from '../../assets/ExchangeData';
 import { Link } from 'react-router-dom';
+import icon from './arrows.png'
 
 export default function MainPart(props) {
     return (
@@ -75,7 +76,7 @@ export default function MainPart(props) {
             </div>
             <div className="img-Container">
                 <img src={props.myProductIcon.default} alt="" />
-                <div class="triangle-right"></div>
+                <img id='arrows'src={icon} alt="arrows" />
                 <img src={props.desiredProductIcon.default} alt="" />
             </div>
             <textarea
