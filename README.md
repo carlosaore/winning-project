@@ -1,5 +1,6 @@
-# Hackathon -FAIRTRADE
+# Hackathon - Back to the future
 
+## FAIRTRADE
 
 
 ## Table of contents
@@ -8,10 +9,8 @@
 * [Idea](#idea)
 * [General info](#general-info)
 * [API certificate](#api-certificate)
-* [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
-* [Status](#status)
 * [Contact](#contact)
 
 
@@ -21,12 +20,12 @@
 
 
 ### Journey
-> We must have got kidnapped.
-I can’t remember anything.
-Just waking up somewhere,
+We must have got kidnapped.
+I can’t remember anything
+except from waking up somewhere,
 we had never been before.
 It was a very crowded place
-it was noisy
+it was noisy and smelly,
 it was people, animals and stuff everywhere.
 
 **** 
@@ -38,7 +37,7 @@ How is that possible?
 
 ****
 
-We had no idea how we got here
+We had no idea how we got here,
 and still less, how we should travel back.
 So we decided to find something to eat and
 a place to stay until we found out 
@@ -76,9 +75,9 @@ bring sth to the market and change it for whatever you need.
 Maybe bring more of whatever you have
 since you never know what you will get in exchange today.
 
-## And for sure, watch out to not to get pulled over the barrel!
+#### And for sure, watch out to not to get pulled over the barrel!
 
-## That is daily business
+That is daily business
 
 And it’s many people who already lost a lot by getting tricked.
 
@@ -86,7 +85,7 @@ And it’s many people who already lost a lot by getting tricked.
 
 We are leaving the market to think about what Robin told us
 
-## I think we can solve this issue and bring fairness into this world!
+#### I think we can solve this issue and bring fairness into this world!
 
 
 
@@ -96,13 +95,17 @@ There should be exchange rates,
 
 being accessible for everyone.
 
-Everyone should be able to know at every time
+Everyone should be able to know 
 
-what he could get in exchange 
+at every time,
 
-for what he wants to exchange.
+what he could get in exchange, 
+
+for what he wants to trade.
 
 
+## Fairtrade App
+![Fairtrade App](./img/app.jpg)
 
 ## General info
 We created an App to make trade in the Middle Ages fair.
@@ -126,33 +129,19 @@ So be smart and watch the market!
 ![API certificate](./img/certificate.jpg)
 
 
-## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
-
-
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
-
-
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
+Get the App here:
+https://condescending-poitras-f71883.netlify.app/
 
 
 ## Features
-* See best items along with items for your trade
-* price fluctutaion is integrated
-* certiefied API for Middle Ages trades
+* get best deals for your items, space-monkeys and sexy-farmers
+* integrated price fluctuation
+* certified API about trading prices and data in medieval towns and markets
 
 To-do list:
 * Arrows will turn into different colors, depending on how good your trade is.
-* See in a graph how the fluctuation was.
-
-
-## Status
-Project is: _finished_
+* Integrate a graph showing the fluctuation
 
 
 ## Contact
