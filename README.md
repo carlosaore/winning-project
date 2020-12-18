@@ -9,10 +9,8 @@
 * [Idea](#idea)
 * [General info](#general-info)
 * [API certificate](#api-certificate)
-* [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
-* [Status](#status)
 * [Contact](#contact)
 
 
@@ -77,9 +75,9 @@ bring sth to the market and change it for whatever you need.
 Maybe bring more of whatever you have
 since you never know what you will get in exchange today.
 
-## And for sure, watch out to not to get pulled over the barrel!
+#### And for sure, watch out to not to get pulled over the barrel!
 
-## That is daily business
+That is daily business
 
 And it’s many people who already lost a lot by getting tricked.
 
@@ -87,7 +85,7 @@ And it’s many people who already lost a lot by getting tricked.
 
 We are leaving the market to think about what Robin told us
 
-## I think we can solve this issue and bring fairness into this world!
+#### I think we can solve this issue and bring fairness into this world!
 
 
 
@@ -107,7 +105,7 @@ for what he wants to trade.
 
 
 ## Fairtrade App
-![Fairtrade App](./img/phone-mockup.jpg)
+![Fairtrade App](./img/app.jpg)
 
 ## General info
 We created an App to make trade in the Middle Ages fair.
@@ -131,33 +129,19 @@ So be smart and watch the market!
 ![API certificate](./img/certificate.jpg)
 
 
-## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
-
-
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
-
-
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
+Get the App here:
+https://condescending-poitras-f71883.netlify.app/
 
 
 ## Features
-* See best items along icons for your trade
-* price fluctutaion is integrated
+* get best deals for your items, space-monkeys and sexy-farmers
+* integrated price fluctuation
 * certified API about trading prices and data in medieval towns and markets
 
 To-do list:
 * Arrows will turn into different colors, depending on how good your trade is.
-* See in a graph how the fluctuation was.
-
-
-## Status
-Project is: _finished_
+* Integrate a graph showing the fluctuation
 
 
 ## Contact
