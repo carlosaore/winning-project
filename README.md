@@ -90,7 +90,7 @@ We are leaving the market to think about what Robin told us
 
 
 
-### Solving the need
+### Idea
 
 There should be exchange rates,
 
@@ -144,7 +144,6 @@ Show examples of usage:
 `put-your-code-here`
 
 ## Features
-List of features ready and TODOs for future development
 * See best items along with items for your trade
 * price fluctutaion is integrated
 * certiefied API for Middle Ages trades
