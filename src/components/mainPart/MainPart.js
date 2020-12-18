@@ -3,7 +3,6 @@ import React from 'react';
 import ExchangeData from '../../assets/ExchangeData';
 import { Link } from 'react-router-dom';
 import icon from './arrows.png';
-
 export default function MainPart(props) {
     return (
         <div className="main-main-div">
@@ -33,8 +32,8 @@ export default function MainPart(props) {
                         }}
                         value={props.myProduct}
                     >
-                        {ExchangeData.map((data) => (
-                            <option value={data.value}>{data.name}</option>
+                        {ExchangeData.map((data, index) => (
+                            <option key={index} value={data.value}>{data.name}</option>
                         ))}
                     </select>
                 </form>
@@ -56,8 +55,8 @@ export default function MainPart(props) {
                         }}
                         value={props.desiredProduct}
                     >
-                        {ExchangeData.map((data) => (
-                            <option value={data.value}>{data.name}</option>
+                        {ExchangeData.map((data, index) => (
+                            <option key={index} value={data.value}>{data.name}</option>
                         ))}
                     </select>
                 </form>
