@@ -9,7 +9,6 @@
 * [Idea](#idea)
 * [General info](#general-info)
 * [API certificate](#api-certificate)
-* [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
@@ -129,12 +128,6 @@ So be smart and watch the market!
 
 ## API certificate
 ![API certificate](./img/certificate.jpg)
-
-
-## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
 
 
 ## Setup
