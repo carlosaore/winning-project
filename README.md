@@ -11,7 +11,6 @@
 * [API certificate](#api-certificate)
 * [Setup](#setup)
 * [Features](#features)
-* [Status](#status)
 * [Contact](#contact)
 
 
@@ -106,7 +105,7 @@ for what he wants to trade.
 
 
 ## Fairtrade App
-![Fairtrade App](./img/phone-mockup.jpg)
+![Fairtrade App](./img/app.jpg)
 
 ## General info
 We created an App to make trade in the Middle Ages fair.
@@ -131,12 +130,8 @@ So be smart and watch the market!
 
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
-
-
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
+Get the App here:
+https://condescending-poitras-f71883.netlify.app/
 
 
 ## Features
@@ -147,10 +142,6 @@ Show examples of usage:
 To-do list:
 * Arrows will turn into different colors, depending on how good your trade is.
 * See in a graph how the fluctuation was.
-
-
-## Status
-Project is: _finished_
 
 
 ## Contact
