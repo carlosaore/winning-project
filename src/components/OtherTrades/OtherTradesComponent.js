@@ -7,10 +7,17 @@ export default function OtherTradesComponent() {
         <p>farm</p>
         <img src="https://via.placeholder.com/50" alt="" />
       </div>
-      <div className="options">
-        <p>farmer</p>
-        <img src="https://via.placeholder.com/50" alt="" />
-      </div>
     </div>
   );
 }
+
+// {props.allPrices.map((price, index) => {
+//     return (
+//       <div className="options">
+//         <p>
+//           {props.allPrices[index]} {ExchangeData[index].value}
+//         </p>
+//         <img src="https://via.placeholder.com/50" alt="" />
+//       </div>
+//     );
+//   })}

@@ -22,6 +22,7 @@ export default function App() {
         default: eggsIcon,
     });
     const [tradeFairness, setTradeFairness] = useState('fair');
+    const [allPrices, setAllPrices] = useState([]);
 
     const apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
 
@@ -47,6 +48,7 @@ export default function App() {
 
     useEffect(() => {
         countPrice();
+        countAllPrices();
     }, [myProduct, myProductAmount, desiredProduct, currentRate]);
 
     const countPrice = () => {
@@ -65,6 +67,19 @@ export default function App() {
         setTradeFairness(fairness);
 
         setDesiredProductAmount(roundedAmount);
+    };
+
+    const countAllPrices = () => {
+        let allPrices = [];
+        Object.keys(currentRate).forEach((key) => {
+            allPrices.push(
+                Math.round(
+                    (myProductAmount * currentRate[myProduct]) /
+                        currentRate[key]
+                )
+            );
+        });
+        setAllPrices(allPrices);
     };
 
     const updateRatios = () => {
@@ -87,7 +102,25 @@ export default function App() {
                 <Switch>
                     <Route
                         path="/other_trades"
-                        render={(props) => <OtherTrades {...props} />}
+                        render={(props) => (
+                            <OtherTrades
+                                myProduct={myProduct}
+                                myProductIcon={myProductIcon}
+                                desiredProductIcon={desiredProductIcon}
+                                desiredProduct={desiredProduct}
+                                myProductAmount={myProductAmount}
+                                desiredProductAmount={desiredProductAmount}
+                                setMyProduct={setMyProduct}
+                                setMyProductIcon={setMyProductIcon}
+                                setDesiredProductIcon={setDesiredProductIcon}
+                                setMyProductAmount={setMyProductAmount}
+                                setDesiredProduct={setDesiredProduct}
+                                setDesiredProductAmount={
+                                    setDesiredProductAmount
+                                }
+                                allPrices={allPrices}
+                            />
+                        )}
                     />
                     <Route
                         path="/Page2"
