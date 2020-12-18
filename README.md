@@ -1,5 +1,6 @@
-# Hackathon -FAIRTRADE
+# Hackathon - Back to the future
 
+## FAIRTRADE
 
 
 ## Table of contents
@@ -105,6 +106,8 @@ what he could get in exchange,
 for what he wants to trade.
 
 
+## Fairtrade App
+![Fairtrade App](./img/phone-mockup.jpg)
 
 ## General info
 We created an App to make trade in the Middle Ages fair.
