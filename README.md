@@ -75,9 +75,9 @@ bring sth to the market and change it for whatever you need.
 Maybe bring more of whatever you have
 since you never know what you will get in exchange today.
 
-## And for sure, watch out to not to get pulled over the barrel!
+#### And for sure, watch out to not to get pulled over the barrel!
 
-## That is daily business
+That is daily business
 
 And it’s many people who already lost a lot by getting tricked.
 
@@ -85,7 +85,7 @@ And it’s many people who already lost a lot by getting tricked.
 
 We are leaving the market to think about what Robin told us
 
-## I think we can solve this issue and bring fairness into this world!
+#### I think we can solve this issue and bring fairness into this world!
 
 
 
