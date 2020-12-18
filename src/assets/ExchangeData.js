@@ -12,7 +12,7 @@ const ExchangeData = [
         icon: '002-corn',
     },
     {
-        name: 'services of sexy-farmer (1 hour)',
+        name: 'services of sexy farmer (1 hour)',
         value: 'SEXY-FARMER',
         currency: 'VND',
         icon: '111-sexy-farmer',
@@ -24,7 +24,7 @@ const ExchangeData = [
         icon: '011-carrots',
     },
     {
-        name: 'hay-bale',
+        name: 'hay bale',
         value: 'HAY-BALE',
         currency: 'DKK',
         icon: '100-hay bale',
@@ -36,7 +36,7 @@ const ExchangeData = [
         icon: '115 Pikachu',
     },
     {
-        name: 'weather-vane',
+        name: 'weather vane',
         value: 'WEATHER-VANE',
         currency: 'MVR',
         icon: '052-weather vane',
@@ -48,13 +48,13 @@ const ExchangeData = [
         icon: '114 space monkey',
     },
     {
-        name: 'ps5',
+        name: 'PS5',
         value: 'PS5',
         currency: 'IDR',
         icon: '113 PS5',
     },
     {
-        name: 'farm-lady (not sure what you will get)',
+        name: 'farm lady (not sure what you will get)',
         value: 'FARM-LADY',
         currency: 'IRR',
         icon: '112 farm-lady',
@@ -90,13 +90,13 @@ const ExchangeData = [
         icon: '018-horse',
     },
     {
-        name: 'farmer-girl',
+        name: 'sexy farmer girl',
         value: 'FARMER-GIRL',
         currency: 'UZS',
         icon: '007-farmer-girl',
     },
     {
-        name: 'farmer',
+        name: 'wisdom from an old farmer',
         value: 'FARMER',
         currency: 'SLL',
         icon: '006-farmer',
