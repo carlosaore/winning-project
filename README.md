@@ -135,13 +135,13 @@ https://condescending-poitras-f71883.netlify.app/
 
 
 ## Features
-* See best items along icons for your trade
-* price fluctutaion is integrated
+* get best deals for your items, space-monkeys and sexy-farmers
+* integrated price fluctuation
 * certified API about trading prices and data in medieval towns and markets
 
 To-do list:
 * Arrows will turn into different colors, depending on how good your trade is.
-* See in a graph how the fluctuation was.
+* Integrate a graph showing the fluctuation
 
 
 ## Contact
