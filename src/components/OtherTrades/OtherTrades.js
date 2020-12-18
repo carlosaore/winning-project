@@ -1,6 +1,7 @@
 import React from "react";
 import "./OtherTrades.css";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import OtherTradesComponent from "./OtherTradesComponent";
 
 export default function OtherTrades(props) {
   return (
@@ -56,54 +57,15 @@ export default function OtherTrades(props) {
           are also worth (options):
         </h3>
         <hr />
-        <div className="options-container">
-          <div className="options">
-            <p>corn</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-          <div className="options">
-            <p>2 cows</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-        </div>
 
-        <div className="options-container">
-          <div className="options">
-            <p>farm</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-          <div className="options">
-            <p>farmer</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-        </div>
-
-        <div className="options-container">
-          <div className="options">
-            <p>farmer girl</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-          <div className="options">
-            <p>pig</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-          <div className="options">
-            <p>cow</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-          <div className="options">
-            <p>carrots</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-          <div className="options">
-            <p>pig</p>
-            <img src="https://via.placeholder.com/50" alt="" />
-          </div>
-        </div>
+        <OtherTradesComponent />
       </div>
 
-
-      <button className='go-back-button'><Link className='link' to="/">GO BACK</Link></button>
+      <button className="go-back-button">
+        <Link className="link" to="/">
+          GO BACK
+        </Link>
+      </button>
     </div>
   );
 }
