@@ -8,7 +8,6 @@ import Page3 from './components/page3/Page3';
 import ExchangeData from './assets/ExchangeData';
 import { useState, useEffect } from 'react';
 import eggsIcon from './assets/icons/023-eggs.png';
-
 export default function App() {
     const [currentRate, setCurrentRate] = useState({});
     const [myProduct, setMyProduct] = useState('EGGS');
@@ -21,7 +20,6 @@ export default function App() {
     });
     const [tradeFairness, setTradeFairness] = useState('fair');
     const [allPrices, setAllPrices] = useState([]);
-
     useEffect(() => {
         const apiUrl = `https://v6.exchangerate-api.com/v6/aa7daac21e6dccc5d465cd13/latest/USD`;
         fetch(apiUrl)
@@ -42,7 +40,6 @@ export default function App() {
                 setCurrentRate(newData);
             });
     }, []);
-
     const countPrice = () => {
         const amount =
             (myProductAmount * currentRate[myProduct]) /
@@ -57,10 +54,8 @@ export default function App() {
                 ? 'loosing'
                 : 'winning';
         setTradeFairness(fairness);
-
         setDesiredProductAmount(roundedAmount);
     };
-
     const countAllPrices = () => {
         let allPrices = [];
         Object.keys(currentRate).forEach((key) => {
@@ -99,12 +94,10 @@ export default function App() {
         });
         setCurrentRate(newDataWithFluctuation);
     };
-
     return (
         <div className="background">
             <div className="app-main-div">
                 {/* <Header /> */}
-
                 <Switch>
                     <Route
                         path="/other_trades"
@@ -136,7 +129,6 @@ export default function App() {
                         path="/Page3"
                         render={(props) => <Page3 {...props} />}
                     />
-
                     <Route
                         exact
                         path="/"
@@ -163,7 +155,6 @@ export default function App() {
                         )}
                     />
                 </Switch>
-
                 {/* <Footer /> */}
             </div>
         </div>

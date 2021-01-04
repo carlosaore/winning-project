@@ -2,12 +2,11 @@ import React from 'react';
 import './OtherTrades.css';
 import { Link } from 'react-router-dom';
 import ExchangeData from '../../assets/ExchangeData';
-
 export default function OtherTrades(props) {
     // useEffect(() => {
     //     props.setDesiredProduct(ExchangeData[0].value);
     // }, [props.myProduct]);
-    console.log(props.allPrices[1]);
+    // console.log(props.allPrices[1]);
     return (
         <div className="main-main-div">
             <div className="form-container">
@@ -27,13 +26,12 @@ export default function OtherTrades(props) {
                         }}
                         value={props.myProduct}
                     >
-                        {ExchangeData.map((data) => (
-                            <option value={data.value}>{data.name}</option>
+                        {ExchangeData.map((data, index) => (
+                            <option key={index} value={data.value}>{data.name}</option>
                         ))}
                     </select>
                 </form>
             </div>
-
             <div>
                 <h3>
                     Your
@@ -58,14 +56,12 @@ export default function OtherTrades(props) {
                             </div>
                         );
                     })}
-
                     {/* <div className="options">
                         <p>2 cows</p>
                         <img src="https://via.placeholder.com/50" alt="" />
                     </div> */}
                 </div>
             </div>
-
             <button className="go-back-button">
                 <Link to="/">GO BACK</Link>
             </button>

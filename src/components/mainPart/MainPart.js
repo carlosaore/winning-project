@@ -3,7 +3,6 @@ import React from 'react';
 import ExchangeData from '../../assets/ExchangeData';
 import { Link } from 'react-router-dom';
 import icon from './arrows.png';
-
 export default function MainPart(props) {
     return (
         <div className="main-main-div">
