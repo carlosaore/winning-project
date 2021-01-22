@@ -1,6 +1,6 @@
 # Hackathon - Back to the future
 
-> This is an web application that was coded using React during a 48 hours hackathon in web developer Bootcamp by four students.\
+> This is a web application that was coded using React during a 48 hours hackathon in web developer Bootcamp by four students.\
 It's an app that provides information for a buy/sell trading system based on barter...in the middle ages...
 
 [View demo](https://relaxed-montalcini-9c04b3.netlify.app/)
