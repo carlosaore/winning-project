@@ -1,5 +1,11 @@
 const ExchangeData = [
     {
+        name: 'select a product',
+        value: '',
+        currency: '',
+        icon: '',
+    },
+    {
         name: 'egg',
         value: 'EGG',
         currency: 'USD',

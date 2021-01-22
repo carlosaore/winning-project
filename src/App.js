@@ -3,16 +3,14 @@ import React from 'react';
 import './App.css';
 import MainPart from './components/mainPart/MainPart';
 import OtherTrades from './components/OtherTrades/OtherTrades';
-import Page2 from './components/page2/Page2';
-import Page3 from './components/page3/Page3';
 import ExchangeData from './assets/ExchangeData';
 import { useState, useEffect } from 'react';
 import eggsIcon from './assets/icons/023-eggs.png';
 export default function App() {
     const [currentRate, setCurrentRate] = useState({});
-    const [myProduct, setMyProduct] = useState('EGGS');
+    const [myProduct, setMyProduct] = useState('');
     const [myProductAmount, setMyProductAmount] = useState('');
-    const [desiredProduct, setDesiredProduct] = useState('EGGS');
+    const [desiredProduct, setDesiredProduct] = useState('');
     const [desiredProductAmount, setDesiredProductAmount] = useState('');
     const [myProductIcon, setMyProductIcon] = useState({ default: eggsIcon });
     const [desiredProductIcon, setDesiredProductIcon] = useState({
@@ -55,6 +53,7 @@ export default function App() {
                 : 'winning';
         setTradeFairness(fairness);
         setDesiredProductAmount(roundedAmount);
+        console.log(currentRate[myProduct])
     };
     const countAllPrices = () => {
         let allPrices = [];
@@ -120,14 +119,6 @@ export default function App() {
                                 allPrices={allPrices}
                             />
                         )}
-                    />
-                    <Route
-                        path="/Page2"
-                        render={(props) => <Page2 {...props} />}
-                    />
-                    <Route
-                        path="/Page3"
-                        render={(props) => <Page3 {...props} />}
                     />
                     <Route
                         exact

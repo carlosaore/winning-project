@@ -1,18 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Amarante&family=Niconne&display=swap');
 
-.body {
+body {
     font-family: 'Almendra SC', serif;
     font-family: 'Amarante', cursive;
-}
-
-
-.background{
     background-image: url("/src/assets/vintage.jpg");
-    padding: 50px;
     background-size: cover;
-    text-align:center;
+    text-align: center;
 }
-  
-  .app.app.main-div {
+
+.app.app.main-div {
     margin: 50 px;
 }
