@@ -3,8 +3,7 @@
 body {
     font-family: 'Almendra SC', serif;
     font-family: 'Amarante', cursive;
-    background-image: url("/src/assets/vintage.jpg");
-    background-size: cover;
+    background-color: #ebdec7;
     text-align: center;
 }
 
